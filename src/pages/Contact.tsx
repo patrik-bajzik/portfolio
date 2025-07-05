@@ -1,4 +1,4 @@
-import { DiscordOutlined, MailOutlined, PhoneOutlined } from "@ant-design/icons";
+import { DiscordOutlined, MailOutlined } from "@ant-design/icons";
 import profilePicture from "../assets/Profile-picture-without-me.jpg?url";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar.tsx";
@@ -16,7 +16,14 @@ const Contact = () => {
               </h1>
               <p className="text-base lg:text-xl 2xl:text-2xl">console.log("Hello!");</p>
             </div>
-            <div className="grid-layout grid grid-cols-1 grid-rows-1 items-stretch justify-stretch gap-x-10 gap-y-8 mt-16 mx-auto max-w-[400px] text-white w-full lg:grid-cols-3 lg:w-auto lg:max-w-none">
+            <div className="grid-layout grid grid-cols-1 grid-rows-1 items-stretch justify-stretch gap-x-10 gap-y-8 mt-16 mx-auto max-w-[400px] text-white w-full lg:grid-cols-2 lg:w-2/3 lg:max-w-none">
+
+              {/* DISCORD */}
+              <div className="contact-info-container flex flex-col items-center gap-y-4 bg-[#3f3f3f] rounded-xl px-6 py-10">
+                <DiscordOutlined className="text-4xl" />
+                <h2 className="font-medium text-xl">Write Me</h2>
+                <p>Patri22k#2466</p>
+              </div>
 
               {/* EMAIL */}
               <div className="contact-info-container flex flex-col items-center gap-y-4 bg-[#3f3f3f] rounded-xl px-6 py-10">
@@ -25,19 +32,6 @@ const Contact = () => {
                 <p>bajzik.patrik6@gmail.com</p>
               </div>
 
-              {/* PHONE */}
-              <div className="contact-info-container flex flex-col items-center gap-y-4 bg-[#3f3f3f] rounded-xl px-6 py-10">
-                <PhoneOutlined className="text-4xl" />
-                <h2 className="font-medium text-xl">Call Me</h2>
-                <p>+421 904 605 850</p>
-              </div>
-
-              {/* DISCORD */}
-              <div className="contact-info-container flex flex-col items-center gap-y-4 bg-[#3f3f3f] rounded-xl px-6 py-10">
-                <DiscordOutlined className="text-4xl" />
-                <h2 className="font-medium text-xl">Write Me</h2>
-                <p>Patri22k#2466</p>
-              </div>
             </div>
           </div>
         </div>

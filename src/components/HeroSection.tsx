@@ -16,7 +16,7 @@ const HeroSection = () => {
                     <div className="w-full max-w-[600px]">
                         <p className="text-center font-normal lg:text-xl 2xl:text-2xl">
                             I am a full stack programmer and software developer <br className="hidden sm:block 2xl:hidden" />
-                            based in Trnava, Slovakia.</p>
+                            based in Slovakia.</p>
                     </div>
                     <div className="mt-4 lg:w-60 2xl:w-72">
                         <Button
