@@ -8,7 +8,7 @@ import CustomLink from "./CustomLink.tsx";
 const ProjectsContent = () => {
   return (
     <div className="projects-content-container">
-      <CustomProject>
+      <CustomProject id="todo">
         <CustomProject.image>
           <img className="w-auto max-w-full h-auto" src={todoListMern} alt="Project 3 cover"/>
         </CustomProject.image>
@@ -29,15 +29,15 @@ const ProjectsContent = () => {
             MongoDB Atlas (database). For more details, you can check the
             GitHub repository.
           </CustomProject.text>
-          <CustomProject.link link="https://github.com/Patri22k/ToDoListAPI">
+          <CustomProject.link link="https://github.com/patrik-bajzik/todo-list">
             <LinkOutlined/>
             <span>
-              https://github.com/Patri22k/ToDoListAPI
+              https://github.com/patrik-bajzik/ToDoListAPI
             </span>
           </CustomProject.link>
         </div>
       </CustomProject>
-      <CustomProject>
+      <CustomProject id="personal-blog">
         <div className="content-wrapper w-auto h-auto">
           <CustomProject.HeadingTagline>
             Project 2
@@ -58,10 +58,10 @@ const ProjectsContent = () => {
             app using modern JavaScript technologies, ideal for small-scale
             personal projects or prototypes.
           </CustomProject.text>
-          <CustomProject.link link="https://github.com/Patri22k/Roadmap-backend/tree/master/personal-blog">
+          <CustomProject.link link="https://github.com/patrik-bajzik/Roadmap-backend/tree/master/personal-blog">
             <LinkOutlined/>
             <span>
-              https://github.com/Patri22k/Roadmap-backend/tree/master/personal-blog
+              https://github.com/patrik-bajzik/Roadmap-backend/tree/master/personal-blog
             </span>
           </CustomProject.link>
         </div>
@@ -69,7 +69,7 @@ const ProjectsContent = () => {
           <img className="w-auto max-w-full h-auto" src={personalBlogCover} alt="Project 2 cover"/>
         </CustomProject.image>
       </CustomProject>
-      <CustomProject>
+      <CustomProject id="task-tracker">
         <CustomProject.image>
           <img className="w-auto max-w-full h-auto" src={taskTracker} alt="Project 1 cover"/>
         </CustomProject.image>
@@ -88,10 +88,10 @@ const ProjectsContent = () => {
               roadmap.sh
             </CustomLink>
           </CustomProject.text>
-          <CustomProject.link link="https://github.com/Patri22k/Roadmap-backend/tree/master/task-tracker">
+          <CustomProject.link link="https://github.com/patrik-bajzik/Roadmap-backend/tree/master/task-tracker">
             <LinkOutlined/>
             <span>
-              https://github.com/Patri22k/Roadmap-backend/tree/master/task-tracker
+              https://github.com/patrik-bajzik/Roadmap-backend/tree/master/task-tracker
             </span>
           </CustomProject.link>
         </div>

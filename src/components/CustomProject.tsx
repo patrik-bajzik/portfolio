@@ -1,6 +1,6 @@
-import React from "react";
+import React, {ComponentProps} from "react";
 
-interface LayoutProps {
+interface LayoutProps extends ComponentProps<"div"> {
   children?: React.ReactNode;
 }
 
@@ -16,11 +16,14 @@ interface TextLayoutProps extends LayoutProps {
   link: string;
 }
 
-const CustomProject: CustomProjectProps = (props: LayoutProps) => {
+const CustomProject: CustomProjectProps = ({ children, ...next }: LayoutProps) => {
   return (
     <div
-      className="w-[90%] mx-auto max-w-[80rem] py-16 md:py-24 grid grid-cols-1 grid-rows-1 justify-stretch items-center gap-12 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
-      {props.children}
+      className={`w-[90%] mx-auto max-w-[80rem] py-16 md:py-24 grid grid-cols-1 grid-rows-1 justify-stretch`
+        + ` items-center gap-12 md:grid-cols-2 md:gap-x-12 md:gap-y-16`}
+      {...next}
+    >
+      {children}
     </div>
   );
 };

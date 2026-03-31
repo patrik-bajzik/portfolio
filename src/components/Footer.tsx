@@ -13,7 +13,7 @@ const Footer = () => {
             </div>
             <div className="footer-social-media-wrapper flex justify-center items-center gap-x-3 pb-[50px]">
                 <div className="link-block">
-                    <a className="flex justify-center items-center w-11 h-11" href="https://github.com/Patri22k" target="_blank">
+                    <a className="flex justify-center items-center w-11 h-11" href="https://github.com/patrik-bajzik" target="_blank">
                         <img className="w-5 h-5 max-w-full lg:w-6 lg:h-6" src={githubIcon} alt="GitHub Icon"></img>
                     </a>
                 </div>

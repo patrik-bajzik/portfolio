@@ -22,7 +22,7 @@ const Contact = () => {
               <div className="contact-info-container flex flex-col items-center gap-y-4 bg-[#3f3f3f] rounded-xl px-6 py-10">
                 <DiscordOutlined className="text-4xl" />
                 <h2 className="font-medium text-xl">Write Me</h2>
-                <p>Patri22k#2466</p>
+                <p>patrik_bajzik</p>
               </div>
 
               {/* EMAIL */}
@@ -54,7 +54,7 @@ const Contact = () => {
                   LinkedIn
                 </p>
               </a>
-              <a className="footer-links pb-1 mr-5 mb-5" href="https://github.com/Patri22k" target="_blank">
+              <a className="footer-links pb-1 mr-5 mb-5" href="https://github.com/patrik-bajzik" target="_blank">
                 <p className="footer-links inline pb-1 mr-5 mb-5 text-xl shadow-[inset_0px_-2px_0px_0px_rgba(0,0,0,0.5)]">
                   GitHub
                 </p>
@@ -69,7 +69,7 @@ const Contact = () => {
                   Stack Overflow
                 </p>
               </a>
-              <a className="footer-links pb-1 mr-5 mb-5" href="https://codepen.io/patri22k" target="_blank">
+              <a className="footer-links pb-1 mr-5 mb-5" href="https://codepen.io/patrik-bajzik" target="_blank">
                 <p className="footer-links inline pb-1 mr-5 mb-5 text-xl shadow-[inset_0px_-2px_0px_0px_rgba(0,0,0,0.5)]">
                   CodePen
                 </p>
