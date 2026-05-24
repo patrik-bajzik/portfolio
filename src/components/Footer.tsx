@@ -1,4 +1,4 @@
-import profilePicture from "../assets/Profile-picture-without-me.jpg";
+import profilePicture from "../assets/fotka-mna-anime-mikina.png";
 import facebookIcon from '../assets/Logos/facebook-logo.svg';
 import instagramIcon from '../assets/Logos/instagram-logo.svg';
 import githubIcon from '../assets/Logos/github-logo.svg';

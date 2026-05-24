@@ -1,5 +1,5 @@
 import { DiscordOutlined, MailOutlined } from "@ant-design/icons";
-import profilePicture from "../assets/Profile-picture-without-me.jpg?url";
+import profilePicture from "../assets/fotka-mna-anime-mikina.png";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar.tsx";
 

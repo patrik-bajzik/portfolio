@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "./Menu.tsx";
-import profilePicture from "../../assets/Profile-picture-without-me.jpg";
+import profilePicture from "../../assets/fotka-mna-anime-mikina.png";
 import AnimateHeight from 'react-animate-height';
 import {MenuOutlined} from "@ant-design/icons";
 
