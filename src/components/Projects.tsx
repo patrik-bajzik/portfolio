@@ -149,7 +149,7 @@ export function Projects() {
 
                                     <div className="mt-6 flex items-center gap-2 border-t border-border pt-5">
                                         <a
-                                            href="https://github.com"
+                                            href="https://github.com/patrik-bajzik"
                                             target="_blank"
                                             rel="noreferrer"
                                             className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface-2/40 px-3.5 py-2 text-xs font-medium text-content-muted transition-all hover:border-border-strong hover:bg-surface-hover hover:text-content-strong"

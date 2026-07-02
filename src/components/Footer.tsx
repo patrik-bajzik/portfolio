@@ -11,19 +11,19 @@ export function Footer() {
                 <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
                     <div className="flex items-center gap-2.5">
             <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-cyan text-xs font-bold text-white">
-              AM
+              PB
             </span>
                         <span className="text-sm text-content-muted">{t('footer.role')}</span>
                     </div>
 
                     <div className="flex items-center gap-1.5">
-                        <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
+                        <a href="https://github.com/patrik-bajzik" target="_blank" rel="noreferrer" aria-label="GitHub" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
                             <GithubOutlined size={16} />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
+                        <a href="https://sk.linkedin.com/in/patrik-bajzik" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
                             <LinkedinOutlined size={16} />
                         </a>
-                        <a href="mailto:alex@mercer.dev" aria-label="Email" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
+                        <a href="mailto:patrik@bajzik.sk" aria-label="Email" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
                             <Mail size={16} />
                         </a>
                     </div>

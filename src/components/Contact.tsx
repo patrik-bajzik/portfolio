@@ -47,7 +47,7 @@ export function Contact() {
                                     {t('contact.body')}
                                 </p>
                                 <a
-                                    href="mailto:alex@mercer.dev"
+                                    href="mailto:patrik@bajzik.sk"
                                     className="group mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-transform hover:scale-[1.02] active:scale-95"
                                     style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-fg)' }}
                                 >

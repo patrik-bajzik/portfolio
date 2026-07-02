@@ -40,7 +40,7 @@ export function Navbar() {
                 >
                     <a href="#top" className="group flex items-center gap-2.5">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-cyan text-sm font-bold text-white shadow-lg shadow-accent/20">
-              AM
+              PB
             </span>
                         <span className="text-sm font-medium tracking-tight text-content-muted transition-colors group-hover:text-content-strong">
               Patrik Bajzík
@@ -66,7 +66,7 @@ export function Navbar() {
                         <ThemeToggle />
                         <span className="mx-1 hidden h-5 w-px bg-border sm:block" />
                         <a
-                            href="https://github.com"
+                            href="https://github.com/patrik-bajzik"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="GitHub"
@@ -75,7 +75,7 @@ export function Navbar() {
                             <GithubOutlined size={17} />
                         </a>
                         <a
-                            href="https://linkedin.com"
+                            href="https://sk.linkedin.com/in/patrik-bajzik"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="LinkedIn"
@@ -84,7 +84,7 @@ export function Navbar() {
                             <LinkedinOutlined size={17} />
                         </a>
                         <a
-                            href="mailto:alex@mercer.dev"
+                            href="mailto:patrik@bajzik.sk"
                             aria-label="Email"
                             className="hidden h-9 w-9 items-center justify-center rounded-lg text-content-muted transition-all hover:bg-surface-hover hover:text-content-strong sm:flex"
                         >
@@ -96,3 +96,4 @@ export function Navbar() {
         </header>
     );
 }
+
