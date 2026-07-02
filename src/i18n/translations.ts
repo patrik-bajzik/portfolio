@@ -3,6 +3,85 @@ export type Locale = 'sk' | 'en';
 export type TranslationKey = keyof typeof translations.en;
 
 export const translations = {
+    sk: {
+        // Nav
+        'nav.about': 'O mne',
+        'nav.stack': 'Stack',
+        'nav.work': 'Práca',
+        'nav.contact': 'Kontakt',
+
+        // Hero
+        'hero.badge': 'Dostupný pre nové príležitosti',
+        'hero.titleLine1': 'Tvorím softvér',
+        'hero.titleAccent': 'ktorý pôsobí',
+        'hero.titleLine2': 'prirodzene.',
+        'hero.intro': "Som {name}, full-stack programátor a softvérový vývojár so sídlom na Slovensku. Môj cieľ je tvoriť softvérové produkty, ktoré si každý obľúbi — s posadnutosťou k perfekcionalizmu, čistým a škálovateľným kódom, kde sa inžinierstvo stretáva s návrhom.",
+        'hero.cta.work': 'Pozrieť vybranú prácu',
+        'hero.cta.contact': 'Kontaktovať',
+        'hero.stat.projects': 'Produkčné projekty',
+        'hero.stat.repos': 'Verejných repozitárov',
+        'hero.stat.roadmap': 'Roadmap dokončených projektov',
+        'hero.stat.years': 'Roky programovania',
+
+        // About
+        'about.label': '01 — O mne',
+        'about.title': 'Premieňam nápady na',
+        'about.titleAccent': 'softvér, ktorý',
+        'about.titleEnd': 'ľudia obľúbia.',
+        'about.p1': "Moja programátorská cesta začala v raných tínedžerských rokoch a odvtedy tvorím — od malých skriptov po full-stack aplikácie. Som vášnivý pre tvorbu softvéru, ktorý nielen plynule funguje, ale aj poteší používateľov.",
+        'about.p2': 'Moje skúsenosti pokrývajú front-end aj back-end vývoj. Na backende pracujem so Spring Bootom (Java) alebo Node.js (Express.js), na frontende používam React a Next.js s TypeScriptom. Záleží mi na čistej architektúre, OOP návrhových vzoroch a budovaní informačných systémov od nuly.',
+        'about.p3': "Najnovšie som pôsobil ako AI Produkt Vývojár v Slovenskej sporiteľni, kde som udržiaval Streamlit-based Python webovú aplikáciu, budoval Power BI dashboardy a navrhoval dátové pipelines. Keď nekodím, zvyčajne skúmam nové technológie alebo čítam dokumentáciu.",
+        'about.pillar.engineering.title': 'Inžinierstvo',
+        'about.pillar.engineering.body': 'Píšem kód, ktorý sa číta ako próza — typovaný, testovaný a stavaný tak, aby prežil pôvodný zámer.',
+        'about.pillar.architecture.title': 'Architektúra',
+        'about.pillar.architecture.body': 'Od monolitov po informačné systémy — navrhujem hranice, ktoré škálujú s tímom aj s požiadavkami.',
+        'about.pillar.craft.title': 'Remeslo',
+        'about.pillar.craft.body': 'Zameriavam sa na kvalitu kódu a čistú štruktúru projektu.',
+
+        // Technologies
+        'tech.label': '02 — Stack',
+        'tech.title': 'Nástroje, po ktorých siaham',
+        'tech.titleAccent': 'bez rozmýšľania.',
+        'tech.subtitle': 'Pragmatický toolkit vybrúsený naprieč produkčnými systémami — vybraný pre spoľahlivosť, nie novotu.',
+        'tech.java.desc': 'JVM, konkurencia, dlho bežiace služby',
+        'tech.springboot.desc': 'Produkčné API a informačné systémy',
+        'tech.react.desc': 'Architektúra komponentov, stav',
+        'tech.typescript.desc': 'Typy ako dokumentácia',
+        'tech.tailwind.desc': 'Dizajn systémov bleskovo',
+        'tech.docker.desc': 'Reprodukovateľné prostredia',
+        'tech.postgresql.desc': 'Relačné modelovanie, ladenie dotazov',
+        'tech.git.desc': 'História ako komunikačný nástroj',
+        'tech.linux.desc': 'Shell, kernel, spôsob života',
+
+        // Projects
+        'projects.label': '03 — Práca',
+        'projects.title': 'Vybrané projekty,',
+        'projects.titleAccent': 'stavané na trvalo.',
+        'projects.subtitle': 'Malá vzorka. Viac na GitHube.',
+        'projects.helix.blurb': 'Distribuovaný plánovač úloh spracúvajúci 2M+ udalostí/deň s exactly-once sémantikou a latenciou plánovania pod 100ms.',
+        'projects.atlas.blurb': 'Headless knižnica komponentov poháňajúca tri interné dashboardy. Plne typovaná, tree-shakeable, a11y-first.',
+        'projects.forge.blurb': 'CLI nástroj, ktorý generuje produkčne-ready mikroslužby z jedného konfiguračného súboru. Prijalo 40+ inžinierov.',
+        'projects.lumen.blurb': 'Real-time observability vrstva, ktorá premieňa plány Postgres dotazov na zrozumiteľné výkonnostné príbehy.',
+        'projects.code': 'Kód',
+        'projects.demo': 'Živé demo',
+
+        // Contact
+        'contact.label': '04 — Kontakt',
+        'contact.title': 'Postavme niečo',
+        'contact.titleAccent': 'čo stojí za to.',
+        'contact.body': 'Vždy som otvorený diskusii o nových projektoch, kreatívnych nápadoch alebo príležitostiach byť súčasťou vašich vízií. Či už je to full-stack aplikácia, backendová služba alebo dátový pipeline — rád sa dozviem viac.',
+        'contact.cta': 'Začať konverzáciu',
+        'contact.email.label': 'Email',
+        'contact.github.label': 'GitHub',
+        'contact.linkedin.label': 'LinkedIn',
+        'contact.discord.label': 'Discord',
+
+        // Footer
+        'footer.role': 'Patrik Bajzík — Full-stack vývojár',
+        'footer.rights': 'Patrik Bajzík. Všetky práva vyhradené.',
+        'footer.tagline': 'Dizajnované a postavené s presnosťou.',
+    },
+
     en: {
         // Nav
         'nav.about': 'About',
@@ -18,10 +97,10 @@ export const translations = {
         'hero.intro': "I'm {name}, a full-stack programmer and software developer based in Slovakia. My goal is to create software products that everyone will enjoy — with an obsession for detail, performance, and the spaces where engineering meets design.",
         'hero.cta.work': 'View selected work',
         'hero.cta.contact': 'Get in touch',
-        'hero.stat.years': 'Years building',
         'hero.stat.projects': 'Shipped projects',
-        'hero.stat.repos': 'Open-source repos',
-        'hero.stat.coffee': 'Cups of coffee',
+        'hero.stat.repos': 'Public repos',
+        'hero.stat.roadmap': 'Roadmap finished projects',
+        'hero.stat.years': 'Years building',
 
         // About
         'about.label': '01 — About',
@@ -79,86 +158,7 @@ export const translations = {
         // Footer
         'footer.role': 'Patrik Bajzík — Full-Stack Developer',
         'footer.rights': 'Patrik Bajzík. All rights reserved.',
-        'footer.tagline': 'Designed & built with intention.',
-    },
-
-    sk: {
-        // Nav
-        'nav.about': 'O mne',
-        'nav.stack': 'Stack',
-        'nav.work': 'Práca',
-        'nav.contact': 'Kontakt',
-
-        // Hero
-        'hero.badge': 'Dostupný pre nové príležitosti',
-        'hero.titleLine1': 'Tvorím softvér',
-        'hero.titleAccent': 'ktorý pôsobí',
-        'hero.titleLine2': 'prirodzene.',
-        'hero.intro': "Som {name}, full-stack programátor a softvérový vývojár so sídlom na Slovensku. Môj cieľ je tvoriť softvérové produkty, ktoré si každý obľúbi — s posadnutosťou detailom, výkonom a priestormi, kde sa inžinierstvo stretáva s dizajnom.",
-        'hero.cta.work': 'Pozrieť vybranú prácu',
-        'hero.cta.contact': 'Kontaktovať',
-        'hero.stat.years': 'Roky tvorby',
-        'hero.stat.projects': 'Doručené projekty',
-        'hero.stat.repos': 'Open-source repozitáre',
-        'hero.stat.coffee': 'Šálky kávy',
-
-        // About
-        'about.label': '01 — O mne',
-        'about.title': 'Premieňam nápady na',
-        'about.titleAccent': 'softvér, ktorý',
-        'about.titleEnd': 'ľudia obľúbia.',
-        'about.p1': "Moja programátorská cesta začala v raných tinedžerských rokoch a odvtedy tvorím — od malých skriptov po full-stack aplikácie. Som vášnivý pre tvorbu softvéru, ktorý nielen plynule funguje, ale aj poteší používateľov.",
-        'about.p2': 'Moje skúsenosti pokrývajú front-end aj back-end vývoj. Na backende pracujem so Spring Boot a Java, na frontende s React a TypeScript. Záleží mi na čistej architektúre, OOP návrhových vzoroch a budovaní informačných systémov od nuly.',
-        'about.p3': "Najnovšie som pôsobil ako AI Product Developer v Slovenskej sporiteľni, kde som udržiaval Streamlit-based Python webovú aplikáciu, budoval Power BI dashboardy a navrhoval dátové pipelines. Keď nekodím, zvyčajne skúmam nové technológie alebo prispievam do open source.",
-        'about.pillar.engineering.title': 'Inžinierstvo',
-        'about.pillar.engineering.body': 'Píšem kód, ktorý sa číta ako próza — typovaný, testovaný a stavaný tak, aby prežil pôvodný zámer.',
-        'about.pillar.architecture.title': 'Architektúra',
-        'about.pillar.architecture.body': 'Od monolitov po informačné systémy — navrhujem hranice, ktoré škálujú s tímom aj s požiadavkami.',
-        'about.pillar.craft.title': 'Remeslo',
-        'about.pillar.craft.body': 'Terminál je môj dom. Záleží mi na milisekundách, chybových hláseniach a veciach, ktoré používateľ nepostrehne.',
-
-        // Technologies
-        'tech.label': '02 — Stack',
-        'tech.title': 'Nástroje, po ktorých siaham',
-        'tech.titleAccent': 'bez rozmýšľania.',
-        'tech.subtitle': 'Pragmatický toolkit vybrúsený naprieč produkčnými systémami — vybraný pre spoľahlivosť, nie novotu.',
-        'tech.java.desc': 'JVM, konkurencia, dlho bežiace služby',
-        'tech.springboot.desc': 'Produkčné API a informačné systémy',
-        'tech.react.desc': 'Architektúra komponentov, stav',
-        'tech.typescript.desc': 'Typy ako dokumentácia',
-        'tech.tailwind.desc': 'Dizajnové systémy rýchlo',
-        'tech.docker.desc': 'Reproducovateľné prostredia',
-        'tech.postgresql.desc': 'Relačné modelovanie, ladenie dotazov',
-        'tech.git.desc': 'História ako komunikačný nástroj',
-        'tech.linux.desc': 'Shell, kernel, spôsob života',
-
-        // Projects
-        'projects.label': '03 — Práca',
-        'projects.title': 'Vybrané projekty,',
-        'projects.titleAccent': 'stavané na trvalo.',
-        'projects.subtitle': 'Malá vzorka. Viac na GitHube.',
-        'projects.helix.blurb': 'Distribuovaný plánovač úloh spracúvajúci 2M+ udalostí/deň s exactly-once sémantikou a latenciou plánovania pod 100ms.',
-        'projects.atlas.blurb': 'Headless knižnica komponentov poháňajúca tri interné dashboardy. Plne typovaná, tree-shakeable, a11y-first.',
-        'projects.forge.blurb': 'CLI nástroj, ktorý generuje produkčne-ready mikroslužby z jedného konfiguračného súboru. Prijalo 40+ inžinierov.',
-        'projects.lumen.blurb': 'Real-time observability vrstva, ktorá premieňa plány Postgres dotazov na zrozumiteľné výkonnostné príbehy.',
-        'projects.code': 'Kód',
-        'projects.demo': 'Živé demo',
-
-        // Contact
-        'contact.label': '04 — Kontakt',
-        'contact.title': 'Postavme niečo',
-        'contact.titleAccent': 'čo stojí za doručenie.',
-        'contact.body': 'Vždy som otvorený diskusii o nových projektoch, kreatívnych nápadoch alebo príležitostiach byť súčasťou vašich vízií. Či už je to full-stack aplikácia, backendová služba alebo dátový pipeline — rád sa dozviem viac.',
-        'contact.cta': 'Začať konverzáciu',
-        'contact.email.label': 'Email',
-        'contact.github.label': 'GitHub',
-        'contact.linkedin.label': 'LinkedIn',
-        'contact.discord.label': 'Discord',
-
-        // Footer
-        'footer.role': 'Patrik Bajzík — Full-stack vývojár',
-        'footer.rights': 'Patrik Bajzík. Všetky práva vyhradené.',
-        'footer.tagline': 'Dizajnované a postavené s úmyslom.',
+        'footer.tagline': 'Designed & built with precision.',
     },
 } as const;
 

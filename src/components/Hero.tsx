@@ -1,13 +1,13 @@
-import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
-import { useI18n } from '../i18n/I18nContext';
+import {useI18n} from "../hooks/useI18n.ts";
 import { HeroBadge } from './HeroBadge';
 import type { TranslationKey } from '../i18n/translations';
+import {GoArrowDownRight} from "react-icons/go";
 
 const statKeys: { value: string; labelKey: TranslationKey }[] = [
-    { value: '8+', labelKey: 'hero.stat.years' },
-    { value: '40+', labelKey: 'hero.stat.projects' },
-    { value: '12', labelKey: 'hero.stat.repos' },
-    { value: '∞', labelKey: 'hero.stat.coffee' },
+    { value: '3', labelKey: 'hero.stat.projects' },
+    { value: '5+', labelKey: 'hero.stat.repos' },
+    { value: '6', labelKey: 'hero.stat.roadmap' },
+    { value: '3+', labelKey: 'hero.stat.years' },
 ];
 
 export function Hero() {
@@ -61,14 +61,14 @@ export function Hero() {
                             style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-fg)' }}
                         >
                             <span className="relative z-10">{t('hero.cta.work')}</span>
-                            <ArrowUpRight size={16} className="relative z-10 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                            <GoArrowDownRight size={16} className="relative z-10 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </a>
                         <a
                             href="#contact"
                             className="group inline-flex items-center gap-2 rounded-full border border-border bg-surface/40 px-6 py-3 text-sm font-medium text-content backdrop-blur-md transition-all hover:border-border-strong hover:bg-surface-hover"
                         >
                             <span>{t('hero.cta.contact')}</span>
-                            <ArrowDownRight size={16} className="transition-transform group-hover:translate-y-0.5" />
+                            <GoArrowDownRight size={16} className="transition-transform group-hover:translate-y-0.5" />
                         </a>
                     </div>
 

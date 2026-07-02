@@ -1,5 +1,5 @@
-import { Sparkles } from 'lucide-react';
-import { useI18n } from '../i18n/I18nContext';
+import {useI18n} from "../hooks/useI18n.ts";
+import {IoSparklesSharp} from "react-icons/io5";
 
 export function HeroBadge() {
     const { t } = useI18n();
@@ -19,7 +19,7 @@ export function HeroBadge() {
 
                     {/* Icon chip */}
                     <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-accent/20 to-accent-cyan/10 ring-1 ring-inset ring-white/10">
-            <Sparkles size={12} className="text-accent-soft" />
+            <IoSparklesSharp size={12} className="text-accent-soft" />
           </span>
 
                     {/* Text */}

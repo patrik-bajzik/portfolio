@@ -1,19 +1,21 @@
-import { ArrowUpRight, Mail, MessageCircle } from 'lucide-react';
-import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
 import { useReveal } from '../hooks/useReveal';
-import { useI18n } from '../i18n/I18nContext';
+import {useI18n} from "../hooks/useI18n.ts";
 import type { TranslationKey } from '../i18n/translations';
+import { FaDiscord, FaGithub } from "react-icons/fa";
+import { CiLinkedin, CiMail } from "react-icons/ci";
+import { IconType } from "react-icons";
+import { GoArrowUpRight } from "react-icons/go";
 
 const channels: {
     labelKey: TranslationKey;
     value: string;
     href: string;
-    icon: typeof Mail | typeof GithubOutlined;
+    icon: IconType;
 }[] = [
-    { labelKey: 'contact.email.label', value: 'alex@mercer.dev', href: 'mailto:alex@mercer.dev', icon: Mail },
-    { labelKey: 'contact.github.label', value: '@alexmercer', href: 'https://github.com', icon: GithubOutlined },
-    { labelKey: 'contact.linkedin.label', value: 'in/alexmercer', href: 'https://linkedin.com', icon: LinkedinOutlined },
-    { labelKey: 'contact.discord.label', value: 'alex.mercer', href: '#', icon: MessageCircle },
+    { labelKey: 'contact.email.label', value: 'bajzik.patrik6@gmail.com', href: 'mailto:bajzik.patrik6@gmail.com', icon: CiMail },
+    { labelKey: 'contact.github.label', value: '@patrik-bajzik', href: 'https://github.com/patrik-bajzik', icon: FaGithub },
+    { labelKey: 'contact.linkedin.label', value: 'in/patrik-bajzik', href: 'https://linkedin.com/in/patrik-bajzik', icon: CiLinkedin },
+    { labelKey: 'contact.discord.label', value: 'patrik_bajzik', href: '#', icon: FaDiscord },
 ];
 
 export function Contact() {
@@ -52,7 +54,7 @@ export function Contact() {
                                     style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-fg)' }}
                                 >
                                     {t('contact.cta')}
-                                    <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                    <GoArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                                 </a>
                             </div>
 
@@ -70,7 +72,7 @@ export function Contact() {
                                             <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface-2/40 text-content-muted transition-colors group-hover:text-content-strong">
                                                 <c.icon size={18} />
                                             </div>
-                                            <ArrowUpRight
+                                            <GoArrowUpRight
                                                 size={15}
                                                 className="text-content-faint opacity-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-content-muted group-hover:opacity-100"
                                             />

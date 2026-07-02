@@ -1,8 +1,8 @@
-import { ArrowUpRight } from 'lucide-react';
-import { GithubOutlined } from "@ant-design/icons";
 import { useReveal } from '../hooks/useReveal';
-import { useI18n } from '../i18n/I18nContext';
+import {useI18n} from "../hooks/useI18n.ts";
 import type { TranslationKey } from '../i18n/translations';
+import {GoArrowUpRight} from "react-icons/go";
+import {FaGithub} from "react-icons/fa";
 
 type Project = {
     title: string;
@@ -154,7 +154,7 @@ export function Projects() {
                                             rel="noreferrer"
                                             className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface-2/40 px-3.5 py-2 text-xs font-medium text-content-muted transition-all hover:border-border-strong hover:bg-surface-hover hover:text-content-strong"
                                         >
-                                            <GithubOutlined size={14} />
+                                            <FaGithub size={14} />
                                             {t('projects.code')}
                                         </a>
                                         <a
@@ -163,7 +163,7 @@ export function Projects() {
                                             style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-fg)' }}
                                         >
                                             {t('projects.demo')}
-                                            <ArrowUpRight size={14} className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                                            <GoArrowUpRight size={14} className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                                         </a>
                                     </div>
                                 </div>

@@ -1,12 +1,14 @@
-import { Code2, Layers, Terminal } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
-import { useI18n } from '../i18n/I18nContext';
 import type { TranslationKey } from '../i18n/translations';
+import {FaCode, FaTerminal} from "react-icons/fa";
+import {IoLayers} from "react-icons/io5";
+import {IconType} from "react-icons";
+import {useI18n} from "../hooks/useI18n.ts";
 
-const pillars: { icon: typeof Code2; titleKey: TranslationKey; bodyKey: TranslationKey }[] = [
-    { icon: Code2, titleKey: 'about.pillar.engineering.title', bodyKey: 'about.pillar.engineering.body' },
-    { icon: Layers, titleKey: 'about.pillar.architecture.title', bodyKey: 'about.pillar.architecture.body' },
-    { icon: Terminal, titleKey: 'about.pillar.craft.title', bodyKey: 'about.pillar.craft.body' },
+const pillars: { icon: IconType; titleKey: TranslationKey; bodyKey: TranslationKey }[] = [
+    { icon: FaCode, titleKey: 'about.pillar.engineering.title', bodyKey: 'about.pillar.engineering.body' },
+    { icon: IoLayers, titleKey: 'about.pillar.architecture.title', bodyKey: 'about.pillar.architecture.body' },
+    { icon: FaTerminal, titleKey: 'about.pillar.craft.title', bodyKey: 'about.pillar.craft.body' },
 ];
 
 export function About() {
