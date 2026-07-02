@@ -13,6 +13,7 @@
     "@ant-design/icons": "^5.4.0",
     "antd": "^5.20.1",
     "autoprefixer": "^10.4.21",
+    "lucide-react": "^1.23.0",
     "react": "^18.2.0",
     "react-animate-height": "^3.2.3",
     "react-dom": "^18.2.0"

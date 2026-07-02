@@ -1,35 +1,39 @@
-import profilePicture from "../assets/fotka-mna-anime-mikina.png";
-import facebookIcon from '../assets/Logos/facebook-logo.svg';
-import instagramIcon from '../assets/Logos/instagram-logo.svg';
-import githubIcon from '../assets/Logos/github-logo.svg';
+import { Mail } from 'lucide-react';
+import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
+import { useI18n } from '../i18n/I18nContext';
 
-const Footer = () => {
+export function Footer() {
+    const { t } = useI18n();
+
     return (
-        <div className="footer-container mx-auto w-full max-w-full">
-            <div className="footer-text-wrapper flex flex-col items-center justify-center gap-y-5 border-t border-t-[#dfdad2] pt-[50px] pb-10  md:flex-row">
-                <p className="text-xs h-[140%] text-footerGray lg:text-sm">© 2024 All Rights Reserved</p>
-                <img className="mx-[30px] w-16 max-w-full text-sm rounded-2.5xl" src={profilePicture} alt="Profile picture"></img>
-                <p className="text-xs text-footerGray lg:text-sm">DESIGNED WITH PRECISION</p>
-            </div>
-            <div className="footer-social-media-wrapper flex justify-center items-center gap-x-3 pb-[50px]">
-                <div className="link-block">
-                    <a className="flex justify-center items-center w-11 h-11" href="https://github.com/patrik-bajzik" target="_blank">
-                        <img className="w-5 h-5 max-w-full lg:w-6 lg:h-6" src={githubIcon} alt="GitHub Icon"></img>
-                    </a>
-                </div>
-                <div className="link-block">
-                    <a className="flex justify-center items-center w-11 h-11" href="https://www.instagram.com/patrik.bajzik/" target="_blank">
-                        <img className="w-5 h-5 max-w-full lg:w-6 lg:h-6" src={instagramIcon} alt="Instagram Icon"></img>
-                    </a>
-                </div>
-                <div className="link-block">
-                    <a className="flex justify-center items-center w-11 h-11" href="https://www.facebook.com/pato.bajzik/" target="_blank">
-                        <img className="w-5 h-5 max-w-full lg:w-6 lg:h-6" src={facebookIcon} alt="Facebook Icon"></img>
-                    </a>
-                </div>
-            </div>
-        </div>
-    );
-};
+        <footer className="relative border-t border-border py-12">
+            <div className="mx-auto max-w-6xl px-5">
+                <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+                    <div className="flex items-center gap-2.5">
+            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-cyan text-xs font-bold text-white">
+              AM
+            </span>
+                        <span className="text-sm text-content-muted">{t('footer.role')}</span>
+                    </div>
 
-export default Footer;
+                    <div className="flex items-center gap-1.5">
+                        <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
+                            <GithubOutlined size={16} />
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
+                            <LinkedinOutlined size={16} />
+                        </a>
+                        <a href="mailto:alex@mercer.dev" aria-label="Email" className="flex h-9 w-9 items-center justify-center rounded-lg text-content-faint transition-colors hover:bg-surface-hover hover:text-content-strong">
+                            <Mail size={16} />
+                        </a>
+                    </div>
+                </div>
+
+                <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-border pt-6 text-xs text-content-faint sm:flex-row">
+                    <p>© {new Date().getFullYear()} {t('footer.rights')}</p>
+                    <p className="font-mono">{t('footer.tagline')}</p>
+                </div>
+            </div>
+        </footer>
+    );
+}
