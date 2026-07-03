@@ -1,7 +1,7 @@
 import {useI18n} from "../hooks/useI18n.ts";
 import { HeroBadge } from './HeroBadge';
 import type { TranslationKey } from '../i18n/translations';
-import {GoArrowDownRight} from "react-icons/go";
+import {GoArrowDownRight, GoArrowUpRight} from "react-icons/go";
 
 const statKeys: { value: string; labelKey: TranslationKey }[] = [
     { value: '3', labelKey: 'hero.stat.projects' },
@@ -61,7 +61,7 @@ export function Hero() {
                             style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-fg)' }}
                         >
                             <span className="relative z-10">{t('hero.cta.work')}</span>
-                            <GoArrowDownRight size={16} className="relative z-10 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                            <GoArrowUpRight size={16} className="relative z-10 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </a>
                         <a
                             href="#contact"

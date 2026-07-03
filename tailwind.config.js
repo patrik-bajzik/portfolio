@@ -33,6 +33,10 @@ export default {
         'content-muted': 'var(--text-muted)',
         'content-faint': 'var(--text-faint)',
       },
+      screens: {
+        xs: "480px",
+        xss: "320px",
+      },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         display: ['"Instrument Serif"', 'Georgia', 'serif'],
