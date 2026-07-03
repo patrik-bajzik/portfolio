@@ -4,6 +4,8 @@ import type {TranslationKey} from '../i18n/translations';
 import {GoArrowUpRight} from "react-icons/go";
 import {FaGithub} from "react-icons/fa";
 
+type ProjectStatus = 'active' | 'completed';
+
 type Project = {
   title: string;
   blurbKey: TranslationKey;
@@ -11,40 +13,55 @@ type Project = {
   year: string;
   gradient: string;
   pattern: string;
+  image?: string;
+  github?: string;
+  demo?: string;
+  status?: ProjectStatus;
 };
 
 const projects: Project[] = [
   {
-    title: 'Helix',
-    blurbKey: 'projects.helix.blurb',
-    tags: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis'],
-    year: '2024',
+    title: 'QnSlide Web',
+    blurbKey: 'projects.qnslide_web.blurb',
+    tags: ['React', 'TypeScript', 'Tailwind', 'QnSlide'],
+    year: '2026',
     gradient: 'from-indigo-500/20 via-transparent to-cyan-500/10',
     pattern: 'radial',
+    github: 'https://github.com/patrik-bajzik/qnslide-web',
+    status: 'active',
+    // TODO: image: '../assets/qnslide-web',
   },
   {
-    title: 'Atlas UI',
-    blurbKey: 'projects.atlas.blurb',
-    tags: ['React', 'TypeScript', 'Tailwind'],
-    year: '2023',
+    title: 'QnSlide Platform',
+    blurbKey: 'projects.qnslide_platform.blurb',
+    tags: ['Node.js', 'TypeScript', 'PostgreSQL', 'Docker'],
+    year: '2026',
     gradient: 'from-cyan-500/15 via-transparent to-blue-500/10',
     pattern: 'grid',
+    github: 'https://github.com/patrik-bajzik/qnslide-platform',
+    status: 'active',
   },
   {
-    title: 'Forge',
-    blurbKey: 'projects.forge.blurb',
-    tags: ['Go', 'Docker', 'Linux'],
-    year: '2023',
+    title: 'MERN To-do List',
+    blurbKey: 'projects.todo_list_mern.blurb',
+    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
+    year: '2025',
     gradient: 'from-emerald-500/15 via-transparent to-teal-500/10',
     pattern: 'lines',
+    // TODO: change image: '/images/todo-list-mern-cover.png',
+    github: 'https://github.com/patrik-bajzik/todo-list',
+    demo: 'https://todo-mern-pb.vercel.app/',
+    status: 'completed',
   },
   {
-    title: 'Lumen',
-    blurbKey: 'projects.lumen.blurb',
-    tags: ['TypeScript', 'PostgreSQL', 'React'],
-    year: '2022',
+    title: 'Roadmap Backend',
+    blurbKey: 'projects.roadmap_backend.blurb',
+    tags: ['REST API', 'Node.js', 'Express'],
+    year: '2025',
     gradient: 'from-violet-500/15 via-transparent to-fuchsia-500/10',
     pattern: 'dots',
+    github: 'https://github.com/patrik-bajzik/roadmap-backend',
+    status: 'completed',
   },
 ];
 
@@ -90,6 +107,30 @@ function Pattern({kind}: { kind: string }) {
   );
 }
 
+function StatusTag({status}: { status: ProjectStatus }) {
+  const {t} = useI18n();
+  const isActive = status === 'active';
+
+  return (
+    <span
+      className={[
+        'inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-wider backdrop-blur-md',
+        isActive
+          ? 'border border-amber-400/30 bg-amber-500/10 text-amber-300'
+          : 'border border-border-strong bg-black/30 text-content',
+      ].join(' ')}
+    >
+      {isActive && (
+        <span className="relative flex h-1.5 w-1.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"/>
+          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-400"/>
+        </span>
+      )}
+      {isActive ? t('projects.status.active') : t('projects.status.completed')}
+    </span>
+  );
+}
+
 export function Projects() {
   const {ref, visible} = useReveal();
   const {t} = useI18n();
@@ -120,17 +161,29 @@ export function Projects() {
               >
                 {/* Visual */}
                 <div className="relative aspect-[16/9] overflow-hidden border-b border-border bg-bg-elevated">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${p.gradient}`}/>
-                  <Pattern kind={p.pattern}/>
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg-elevated via-transparent to-transparent"/>
+                  {p.image ? (
+                    <div
+                      className="absolute inset-0 bg-center bg-cover"
+                      style={{backgroundImage: `url(${p.image})`}}
+                    />
+                  ) : (
+                    <>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${p.gradient}`}/>
+                      <Pattern kind={p.pattern}/>
+                    </>
+                  )}
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-bg-elevated/80 via-transparent to-transparent"/>
+
                   <div className="absolute left-5 top-5 flex items-center gap-2">
                     <span
                       className="rounded-full border border-border-strong bg-black/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-content backdrop-blur-md">
                       {p.year}
                     </span>
                   </div>
-                  <div className="absolute bottom-5 left-5">
+                  <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
                     <h3 className="text-2xl font-semibold tracking-tight text-content-strong">{p.title}</h3>
+                    {p.status && <StatusTag status={p.status}/>}
                   </div>
                 </div>
 
@@ -150,24 +203,32 @@ export function Projects() {
                   </div>
 
                   <div className="mt-6 flex items-center gap-2 border-t border-border pt-5">
-                    <a
-                      href="https://github.com/patrik-bajzik"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface-2/40 px-3.5 py-2 text-xs font-medium text-content-muted transition-all hover:border-border-strong hover:bg-surface-hover hover:text-content-strong"
-                    >
-                      <FaGithub size={14}/>
-                      {t('projects.code')}
-                    </a>
-                    <a
-                      href="#"
-                      className="group/btn inline-flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-xs font-medium transition-transform hover:scale-[1.03] active:scale-95"
-                      style={{backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-fg)'}}
-                    >
-                      {t('projects.demo')}
-                      <GoArrowUpRight size={14}
-                                      className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"/>
-                    </a>
+                    {p.github && (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface-2/40 px-3.5 py-2 text-xs font-medium text-content-muted transition-all hover:border-border-strong hover:bg-surface-hover hover:text-content-strong"
+                      >
+                        <FaGithub size={14}/>
+                        {t('projects.code')}
+                      </a>
+                    )}
+                    {p.demo && (
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group/btn inline-flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-xs font-medium transition-transform hover:scale-[1.03] active:scale-95"
+                        style={{backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-fg)'}}
+                      >
+                        {t('projects.demo')}
+                        <GoArrowUpRight
+                          size={14}
+                          className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
+                        />
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
