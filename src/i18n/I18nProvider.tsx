@@ -17,7 +17,7 @@ export type I18nContextValue = {
 const STORAGE_KEY = 'portfolio-locale';
 
 function getInitialLocale(): Locale {
-  if (typeof window === 'undefined') return 'en';
+  if (typeof window === 'undefined') return 'sk';
   const stored = window.localStorage.getItem(STORAGE_KEY);
   if (stored === 'en' || stored === 'sk') return stored;
   const nav = window.navigator.language.slice(0, 2).toLowerCase();

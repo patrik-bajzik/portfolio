@@ -117,7 +117,7 @@ export const translations = {
     'about.pillar.architecture.title': 'Architecture',
     'about.pillar.architecture.body': 'From monoliths to information systems, I design boundaries that scale with the team and the requirements.',
     'about.pillar.craft.title': 'Craft',
-    'about.pillar.craft.body': 'The terminal is home. I care about the milliseconds, the error messages, and the things users never notice.',
+    'about.pillar.craft.body': 'I focus on code quality and clean project structure.',
 
     // Technologies
     'tech.label': '02 — Stack',
