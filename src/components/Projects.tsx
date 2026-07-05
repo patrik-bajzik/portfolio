@@ -116,14 +116,14 @@ function StatusTag({status}: { status: ProjectStatus }) {
       className={[
         'inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-wider backdrop-blur-md',
         isActive
-          ? 'border border-amber-400/30 bg-amber-500/10 text-amber-300'
-          : 'border border-border-strong bg-black/30 text-content',
+          ? 'border border-amber-400/40 bg-amber-500/15 text-amber-600 dark:text-amber-300'
+          : 'border border-border-strong bg-surface/80 text-content',
       ].join(' ')}
     >
       {isActive && (
         <span className="relative flex h-1.5 w-1.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"/>
-          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-400"/>
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-500 opacity-75"/>
+          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-500"/>
         </span>
       )}
       {isActive ? t('projects.status.active') : t('projects.status.completed')}
@@ -146,7 +146,8 @@ export function Projects() {
 
           <div className="mt-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <h2
-              className="max-w-2xl text-balance text-3xl font-semibold leading-tight tracking-tight text-content-strong sm:text-4xl md:text-5xl">
+              className="max-w-2xl text-balance text-3xl font-semibold leading-tight tracking-tight text-content-strong sm:text-4xl md:text-5xl"
+            >
               {t('projects.title')}{' '}
               <span className="font-display italic text-content-muted">{t('projects.titleAccent')}</span>
             </h2>
@@ -177,7 +178,7 @@ export function Projects() {
 
                   <div className="absolute left-5 top-5 flex items-center gap-2">
                     <span
-                      className="rounded-full border border-border-strong bg-black/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-content backdrop-blur-md">
+                      className="rounded-full border border-border-strong bg-surface/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-content backdrop-blur-md">
                       {p.year}
                     </span>
                   </div>

@@ -22,8 +22,9 @@ export function HeroBadge() {
 
           {/* Icon chip */}
           <span
-            className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-accent/20 to-accent-cyan/10 ring-1 ring-inset ring-white/10">
-            <IoSparklesSharp size={12} className="text-accent-soft"/>
+            className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-accent/20 to-accent-cyan/10 ring-1 ring-inset ring-white/10"
+          >
+              <IoSparklesSharp size={12} className="text-accent-soft"/>
             </span>
 
           {/* Text */}
