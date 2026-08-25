@@ -50,8 +50,7 @@ export function Contact() {
                 </p>
                 <a
                   href="mailto:bajzik.patrik6@gmail.com"
-                  className="group mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-transform hover:scale-[1.02] active:scale-95"
-                  style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-fg)' }}
+                  className="inline-flex items-center gap-2 mt-8 rounded-full border border-border bg-surface-2/40 px-6 py-3 text-sm font-medium text-content-muted transition-all hover:border-border-strong hover:bg-surface-hover hover:text-content-strong"
                 >
                   {t('contact.cta')}
                   <GoArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
